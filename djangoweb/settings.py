@@ -62,9 +62,10 @@ ROOT_URLCONF = 'djangoweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'C:/Users/Lara Croft/PycharmProjects/DjangoWeb/templates'
-        ],
+        # '''DIRS': [
+        #     'C:/Users/Lara Croft/PycharmProjects/DjangoWeb/templates'
+        # ],'''
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,7 +130,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    'C:/Users/Lara Croft/PycharmProjects/DjangoWeb/static/'
+    #'C:/Users/Lara Croft/PycharmProjects/DjangoWeb/static/',
+    BASE_DIR / 'static',
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -165,8 +167,8 @@ EMAIL_USE_TLS = False
 MEDIA_URL = '/media/'
 
 # Path where media is stored
-MEDIA_ROOT = 'C:/Users/Lara Croft/PycharmProjects/DjangoWeb/media/'
-
+#MEDIA_ROOT = 'C:/Users/Lara Croft/PycharmProjects/DjangoWeb/media/'
+MEDIA_ROOT = BASE_DIR / 'media',
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-secondary',
