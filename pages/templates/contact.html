@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="breadcrumb breadcrumb-1 pos-center">
+		<h1>CONTACT</h1>
+	</div>
+	<div class="content"><!-- Content Section -->
+		<div class="container">
+            {% if name %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container">
+                        <br><br/>
+                        <center>
+                            <h3>Hello {{name}}, we got your message. We will respond shortly! </h3>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+			<div class="row">
+				<div class="col-lg-3 col-sm-4 margint60"><!-- Sidebar -->
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>HOTEL INFORMATION</h5>
+						</div>
+						<p>Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Lorem ipsumero, a pharetra augue. Lorem ipsum dolor sit amet, consectedui.</p>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>CONTACT</h5>
+						</div>
+						<ul class="footer-links">
+							<li><p><i class="fa fa-map-marker"></i> Lorem ipsum dolor sit amet lorem Victoria 8011 Australia </p></li>
+							<li><p><i class="fa fa-phone"></i> +61 3 8376 6284 </p></li>
+							<li><p><i class="fa fa-envelope"></i> info@2035themes.com</p></li>
+						</ul>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>SOCIAL MEDIA</h5>
+						</div>
+						<ul class="social-links">
+							<li><a href="http://facebook.com/2035themes"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com/2035themes"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://vine.com/2035themes"><i class="fa fa-vine"></i></a></li>
+							<li><a href="http://foursquare.com/2035themes"><i class="fa fa-foursquare"></i></a></li>
+							<li><a href="http://instagram.com/2035themes"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-9 col-sm-8"><!-- Contact -->
+					<div id="map" class="maps pos-center margint60"><!-- Contact Maps -->
+						
+					</div>
+					<div class="contact-form margint60"><!-- Contact Form -->
+						<form action="{% url 'contact' %}" method="post" id="ajax-contact-form">
+                            {% csrf_token %}
+							<input type="text" id="cname" placeholder="Name" name="name" >
+							<input type="text" id="csubject" placeholder="Subject" name="subject" >
+							<input type="text" id="cmail" placeholder="E-Mail" name="email" >
+							<textarea placeholder="Write what do you want..." id="ctext" name="message"></textarea>
+							<input class="pull-right margint10" type="submit" value="SUBMIT">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock%}

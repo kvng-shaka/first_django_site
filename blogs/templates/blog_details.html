@@ -1,0 +1,253 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="breadcrumb breadcrumb-1 pos-center">
+		<h1>BLOG DETAILS</h1>
+	</div>
+	<div class="content"><!-- Content Section -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-sm-8 blog-post-contents">
+		            <div class="blog-post"><!-- Blog Post -->
+                        <h3>{{blog.title}}</h3>
+						<div class="post-materials  clearfix">
+                            <ul>                                
+                            	<li><h6><a href="#"><i class="fa fa-calendar"></i> {{blog.created_date}}</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-user"></i>{{blog.author.first_name}} {{blog.author.last_name}}</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-comments"></i>13 COMMENTS</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-tags"></i>{{blog.category}}</a></h6></li>
+                            </ul>
+                        </div>
+                        <div class="blog-image marginb30 margint30">
+                            <img alt="Blog Image 2" class="img-responsive" src="{{blog.image.url}}" >
+                        </div>
+                        <div class="post-content margint10">
+                            <p>{{blog.body}}</p>
+                        </div>
+                        <div class="blog-share-tags clearfix margint40 marginb40"><!-- Blog Post Share & Tags Section -->
+	                    	<div class="pull-left">
+	                    		<div class="blog-tags">
+	                    			<ul>
+	                    				<li class="title"><i class="fa fa-tags"></i></li>
+	                    				<li><h6><a href="#">This</a></h6></li>
+	                    				<li><h6><a href="#">Design</a></h6></li>
+	                    				<li><h6><a href="#">Is</a></h6></li>
+	                    				<li><h6><a href="#">So good</a></h6></li>
+	                    			</ul>
+	                   			</div>
+	                   		</div>
+	                    	<div class="pull-right">
+	                			<div class="blog-share">
+	                    			<ul>
+	                    				<li class="title darkest-color"><h6>SHARE :</h6></li>
+	                    				<li><a href="http://www.facebook.com/sharer.php?u=http://www.2035themes/evenmore/html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Facebook">
+	                    				<i class="fa fa-facebook"></i></a></li>
+	                    				<li><a href="https://twitter.com/share?url=http://www.2035themes/evenmore/html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Twitter">
+	                    				<i class="fa fa-twitter"></i></a></li>
+	                    				<li><a href="http://pinterest.com/pin/create/button/?source_url=http://www.2035themes/evenmore/html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Pinterest">
+	                    				<i class="fa fa-pinterest"></i></a></li>
+	                    				<li><a href="https://plus.google.com/share?url=http://www.2035themes/evenmore/html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Google Plus">
+	                    				<i class="fa fa-google-plus"></i></a></li>
+	                    			</ul>
+	                   			</div>
+	                    	</div>
+	                    </div>
+	                    <div class="comment-number clearfix"><!-- Blog Comment Number Section -->
+							<div class="pull-left">
+								<h3>32 COMMENTS</h3>
+							</div>
+							<div class="pull-right write-comment">
+								<h6><a href="#write-comment">WRITE COMMENT</a></h6>
+							</div>
+	                    </div>
+	                    <div class="comments-container clearfix"><!-- Blog Comments Section -->
+	                    	<ul>
+		                    	<li class="comment-box clearfix margint40">
+		                    		<div class="col-lg-2 comment-author-image">
+		                    			<img alt="Blog Comments Image 1" class="img-circle" src="{% static 'djangoweb/temp/customer-image-1.jpg' %}">
+		                    		</div>
+		                    		<div class="col-lg-10">
+		                    			<h5>{{blog.name}}</h5>
+		                    			<div class="date marginb20">21 JUN</div>
+		                    			<p>{{message}}</p>
+		                    			<div class="comment-reply">
+		                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+		                    			</div>
+		                    		</div>
+		                    	</li>
+		                    	<li class="comment-box clearfix margint40">
+		                    		<div class="col-lg-2 comment-author-image">
+		                    			<img alt="Blog Comments Image 2" class="img-circle" src="{% static 'djangoweb/temp/customer-image-2.jpg' %}">
+		                    		</div>
+		                    		<div class="col-lg-10">
+		                    			<h5>ALEXANDER MAHONE</h5>
+		                    			<div class="date marginb20">21 JUN</div>
+		                    			<p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum.</p>
+		                    			<div class="comment-reply">
+		                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+		                    			</div>
+		                    		</div>
+		                    	</li>
+		                    	<li>
+									<ul class="children clearfix">
+										<li class="comment-box clearfix margint40">
+		                    				<div class="clearfix">
+		                    					<div class="col-lg-2 comment-author-image">
+					                    			<img alt="Blog Comments Image 2" class="img-circle" src="{% static 'djangoweb/temp/customer-image-3.jpg' %}">
+					                    		</div>
+					                    		<div class="col-lg-10">
+					                    			<h5>ALEXANDER MAHONE</h5>
+					                    			<div class="date marginb20">21 JUN</div>
+					                    			<p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
+					                    			<div class="comment-reply">
+					                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+					                    			</div>
+					                    		</div>
+				                    		</div>
+				                    	</li>
+				                    	<li>
+					                    	<ul class="children clearfix">
+												<li class="comment-box clearfix margint40">
+				                    				<div class="clearfix">
+				                    					<div class="col-lg-2 comment-author-image">
+							                    			<img alt="Blog Comments Image 2" class="img-circle" src="{% static 'djangoweb/temp/customer-image-2.jpg' %}">
+							                    		</div>
+							                    		<div class="col-lg-10">
+							                    			<h5>ALEXANDER MAHONE</h5>
+							                    			<div class="date marginb20">21 JUN</div>
+							                    			<p>Exatly, i think!</p>
+							                    			<div class="comment-reply">
+							                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+							                    			</div>
+							                    		</div>
+						                    		</div>
+						                    	</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="comment-box clearfix margint40">
+		                    		<div class="col-lg-2 comment-author-image">
+		                    			<img alt="Blog Comments Image 1" class="img-circle" src="{% static 'djangoweb/temp/customer-image-2.jpg' %}">
+		                    		</div>
+		                    		<div class="col-lg-10">
+		                    			<h5>ALEXANDER MAHONE</h5>
+		                    			<div class="date marginb20">21 JUN</div>
+		                    			<p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum.</p>
+		                    			<div class="comment-reply">
+		                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+		                    			</div>
+		                    		</div>
+		                    	</li>
+		                    	<li class="comment-box clearfix margint40">
+		                    		<div class="col-lg-2 comment-author-image">
+		                    			<img alt="Blog Comments Image 2" class="img-circle" src="{% static 'djangoweb/temp/customer-image-3.jpg' %}">
+		                    		</div>
+		                    		<div class="col-lg-10">
+		                    			<h5>ALEXANDER MAHONE</h5>
+		                    			<div class="date marginb20">21 JUN</div>
+		                    			<p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum.</p>
+		                    			<div class="comment-reply">
+		                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+		                    			</div>
+		                    		</div>
+		                    	</li>
+		                    	<li>
+			                    	<ul class="children clearfix">
+										<li class="comment-box clearfix margint40">
+		                    				<div class="clearfix">
+		                    					<div class="col-lg-2 comment-author-image">
+					                    			<img alt="Blog Comments Image 2" class="img-circle" src="{% static 'djangoweb/temp/customer-image-2.jpg' %}">
+					                    		</div>
+					                    		<div class="col-lg-10">
+					                    			<h5>ALEXANDER MAHONE</h5>
+					                    			<div class="date marginb20">21 JUN</div>
+					                    			<p>Exatly, i think!</p>
+					                    			<div class="comment-reply">
+					                    				<h6><a class="active-color" href="#write-comment">REPLY</a></h6>
+					                    			</div>
+					                    		</div>
+				                    		</div>
+				                    	</li>
+									</ul>
+								</li>
+		                    </ul>
+	                    </div>
+	                    <div class="margint80"><!-- Write Comment -->
+	                    	<div id="write-comment" class="write-comment-box padt60 marginb60 clearfix"><!-- Write Comment Section -->
+		                    	<h2>WRITE COMMENTS</h2>
+		                    	<p class="margint10">Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			                    <div class="contact-form margint40">
+									<form action="{% url 'blog' %}" method="post" id="mini-contact-form">
+                                        {% csrf_token %}
+						                <input type="text" name="name" placeholder="YOUR NAME">
+						                <input type="text" name="subject" placeholder="SUBJECT">
+						                <input type="text" name="email" placeholder="E-MAIL ADDRESS">
+						                <textarea name="message" placeholder="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."></textarea>
+						                <input class="margint10" type="submit" value="SEND NOW">
+						            </form>			
+								</div>
+		                    </div>
+	                    </div>
+                	</div>
+				</div>
+				<div class="col-lg-3 col-sm-4 margint60"><!-- Sidebar -->
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>RECENT NEWS</h5>
+						</div>
+						<ul class="sidebar-recent">
+							<li class="clearfix">
+								<h6><a href="#">News from us from now</a></h6>
+								<div class="pull-left blg-img margint20">
+									<img src="{% static 'djangoweb/temp/sidebar-news-image-1.jpg' %}" class="img-responsive" alt="">
+								</div>
+								<div class="pull-left blg-txt">
+									<p>Donec ullamcorper nulla non metus auctor Nulla vitae elit libero, a pharetra augue <a class="active-color" href="#">[...]</a></p>
+								</div>
+							</li>
+							<li class="clearfix">
+								<h6><a href="#">Its Summary for news</a></h6>
+								<div class="pull-left blg-img margint20">
+									<img src="{% static 'djangoweb/temp/sidebar-news-image-2.jpg' %}" class="img-responsive" alt="">
+								</div>
+								<div class="pull-left blg-txt">
+									<p>Donec ullamcorper nulla non metus auctor Nulla vitae elit libero, a pharetra augue <a class="active-color" href="#">[...]</a></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>HOTEL INFORMATION</h5>
+						</div>
+						<p>Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Lorem ipsumero, a pharetra augue. Lorem ipsum dolor sit amet, consectedui.</p>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>CONTACT</h5>
+						</div>
+						<ul class="footer-links">
+							<li><p><i class="fa fa-map-marker"></i> Lorem ipsum dolor sit amet lorem Victoria 8011 Australia </p></li>
+							<li><p><i class="fa fa-phone"></i> +61 3 8376 6284 </p></li>
+							<li><p><i class="fa fa-envelope"></i> info@2035themes.com</p></li>
+						</ul>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>SOCIAL MEDIA</h5>
+						</div>
+						<ul class="social-links">
+							<li><a href="http://facebook.com/2035themes"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com/2035themes"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://vine.com/2035themes"><i class="fa fa-vine"></i></a></li>
+							<li><a href="http://foursquare.com/2035themes"><i class="fa fa-foursquare"></i></a></li>
+							<li><a href="http://instagram.com/2035themes"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

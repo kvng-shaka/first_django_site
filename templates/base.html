@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Django Web - Hotel</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="{% static 'djangoweb/img/favicon.ico' %}" />
+<!-- CSS FILES -->
+<link rel="stylesheet" href="{% static 'djangoweb/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'djangoweb/css/flexslider.css' %}">
+<link rel="stylesheet" href="{% static 'djangoweb/css/prettyPhoto.css' %}">
+<link rel="stylesheet" href="{% static 'djangoweb/css/datepicker.css' %}">
+<link rel="stylesheet" href="{% static 'djangoweb/css/selectordie.css' %}">
+<link rel="stylesheet" href="{% static 'djangoweb/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'djangoweb/css/2035.responsive.css' %}">
+
+<script src="{% static 'djangoweb/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js' %}"></script>
+
+</head>
+<body>
+<div id="wrapper">
+    {% include 'header.html' %}
+    {% include 'message.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footer.html' %}
+
+</div>
+<!-- JS FILES -->
+<script src="{% static 'djangoweb/js/vendor/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'djangoweb/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'djangoweb/js/retina-1.1.0.min.js' %}"></script>
+<script src="{% static 'djangoweb/js/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'djangoweb/js/superfish.pack.1.4.1.js' %}"></script>
+<script src="{% static 'djangoweb/js/jquery.prettyPhoto.js' %}"></script>
+<script src="{% static 'djangoweb/js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'djangoweb/js/selectordie.min.js' %}"></script>
+<script src="{% static 'djangoweb/js/jquery.slicknav.min.js' %}"></script>
+<script src="{% static 'djangoweb/js/jquery.parallax-1.1.3.js' %}"></script>
+<script src="{% static 'djangoweb/js/main.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="{% static 'djangoweb/js/gmaps.js' %}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60790398-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

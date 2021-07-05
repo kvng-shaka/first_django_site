@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+
+/* Tablet Portrait size to Tablet Landscape (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+}

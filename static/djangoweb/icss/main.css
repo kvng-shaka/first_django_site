@@ -1,0 +1,60 @@
+/*
+* Theme Name:Yatirima Destek
+* Author:2035 Themes
+* Author URI:http://www.2035themes.com/
+* Version:1.0
+*/
+
+@import url("2035-reset.css");
+@import url("font-awesome.min.css");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+@font-face {
+     font-family: 'novecento_bold'; 
+     src: url('fonts/novecento_bold.eot');      src: url('fonts/novecento_bold.woff') format('woff'),  
+       url('http://localhost:8888/blogy/wp-content/themes/blogy/fonts/novecento_bold.ttf') format('truetype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: 'novecento_demibold'; 
+     src: url('fonts/novecento_demibold.eot');          src : url('fonts/novecento_demibold.woff') format('woff'),  
+           url('fonts/novecento_demibold.ttf') format('truetype');     font-weight: normal;
+    font-style: normal;
+}
+
+body{margin:0;padding:0;font-family: "Open Sans", Helvetica, Arial, sans-serif;font-size: 13px;line-height: 23px;font-weight:400;color:#727272;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: 100%;}
+h1{font-size: 35px;font-family: novecento_demibold;color:#fff;letter-spacing: 1px;}
+.classic h1{color:#000;}
+/* Global */
+#wrapper{width:100%;height:auto;}
+.pos-center{text-align:center;}
+.pos-left{text-align:left;}
+.pos-right{text-align:right;}
+input:focus{outline:none;}
+a:hover{text-decoration: none;}
+textarea:focus{outline:none;}
+.rsp-img-center{margin:0 auto;}
+/* Global */
+
+.intro li{float: left;width: 50%;height: 100%;transition: all 0.8s ease-in-out 0s;}
+.intro li.wide{background:url('../iimg/wide.jpg');background-size: cover;}
+.intro li.boxed{background:url('../iimg/boxed.jpg');background-size: cover;}
+.intro a{font-family: Open Sans;font-size:15px;background-color:#E4B248;color:#fff;padding:20px 50px;font-weight: 700;letter-spacing: 1px;}
+.grid-list{display: inline-block;}
+.grid-list li{float:left;width:70px;margin-right:20px;}
+.grid-list li:last-child{margin-right:0px;}
+.intro li.main .lay{font-size: 14px;font-weight: 700;color: #555;}
+.classic .lay{color: #000 !important;}
+.grid-list li a{background-color: transparent;padding: 0;letter-spacing: 0;}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="breadcrumb breadcrumb-1 pos-center">
+		<h1>BLOG</h1>
+	</div>
+	<div class="content"><!-- Content Section -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 col-sm-7 pos-center">
+					<br><br>
+					<h2>All Blog Posts</h2>
+				</div>
+				<div class="col-lg-5 col-sm-5 pull-right">
+					<div class="button-style-1 margint45 pull-right">
+						<a href="{% url 'newpost' %}"><i class="fa fa-plus"></i>ADD NEW POST</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9 col-sm-8 blog-post-contents">
+					{% for blog in blogs %}
+						<div class="blog-post"><!-- Blog Post -->
+							<h3><a href="{% url 'blog-details' blog.pk %}">{{blog.title}}</a></h3>
+							<div class="post-materials  clearfix">
+								<ul>                                
+									<li><h6><a href="#"><i class="fa fa-calendar"></i> {{blog.created_date}}</a></h6></li>
+									<li><h6><a href="#"><i class="fa fa-user"></i>{{blog.author.first_name}} {{blog.author.last_name}}</a></h6></li>
+									<li><h6><a href="#"><i class="fa fa-comments"></i>13 COMMENTS</a></h6></li>
+									<li><h6><a href="#"><i class="fa fa-tags"></i>{{blog.category}}</a></h6></li>
+								</ul>
+							</div>
+							<div class="blog-image marginb30 margint30">
+								<img alt="Blog Image 2" class="img-responsive" src="{{blog.image.url}}" width="848" height="449" >
+							</div>
+							<div class="post-content margint10">
+								<p>
+									{{blog.body}}
+								</p>
+							</div>
+							<div class="button-style-1 margint45"><h6><a href="{% url 'blog-details' blog.pk %}">READ MORE</a></h6></div>
+						</div>
+					{% endfor %}
+
+		            <div class="blog-post">
+                        <h3><a href="blog-details.html">CRAS JUSTO ODIO, DAPIBUS AC FACILISIS</a></h3>
+						<div class="post-materials  clearfix">
+                            <ul>
+                                <li><h6><a href="#"><i class="fa fa-calendar"></i> 24 MAY 2013</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-user"></i>ADMIN</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-comments"></i>13 COMMENTS</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-tags"></i>DESIGN, WORDPRESS, COMPANY</a></h6></li>
+                            </ul>
+                        </div>
+                        <div class="blog-image marginb30 margint30">
+                            <div class="flexslider">
+							  <ul class="slides">
+							    <li><img alt="Blog Image 3" class="img-responsive" src="{% static 'djangoweb/temp/slider-1.jpg' %}"  /> </li>
+							    <li><img alt="Blog Image 3" class="img-responsive" src="{% static 'djangoweb/temp/slider-2.jpg' %}"  /></li>
+							    <li> <img alt="Blog Image 3" class="img-responsive" src="{% static 'djangoweb/temp/slider-3.jpg' %}"  /></li>
+							  </ul>
+							</div>
+                        </div>
+                        <div class="post-content margint10">
+                            <p>Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at nulla vre consectetur est at lobortis.</p>
+                        </div>
+                        <div class="button-style-1 margint45"><h6><a href="blog-details.html">READ MORE</a></h6></div>
+                    </div>
+		            <!-- <div class="blog-post">
+                        <h3><a href="blog-details.html">CRAS JUSTO ODIO, DAPIBUS AC FACILISIS</a></h3>
+						<div class="post-materials  clearfix">
+                            <ul>
+                                <li><h6><a href="#"><i class="fa fa-calendar"></i> 24 MAY 2013</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-user"></i>ADMIN</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-comments"></i>13 COMMENTS</a></h6></li>
+                                <li><h6><a href="#"><i class="fa fa-tags"></i>DESIGN, WORDPRESS, COMPANY</a></h6></li>
+                            </ul>
+                        </div>
+                        <div class="blog-image marginb30 margint30">
+                            <iframe width="1280" height="750" src="http://www.youtube.com/embed/gS333UQnaP4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="post-content margint10">
+                            <p>Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at nulla vre consectetur est at lobortis.</p>
+                        </div>
+                        <div class="button-style-1 margint45"><h6><a href="blog-details.html">READ MORE</a></h6></div>
+                    </div> -->
+				</div>
+				<div class="col-lg-3 col-sm-4 margint60"><!-- Sidebar -->
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>RECENT NEWS</h5>
+						</div>
+						<ul class="sidebar-recent">
+							<li class="clearfix">
+								<h6><a href="#">News from us from now</a></h6>
+								<div class="pull-left blg-img margint20">
+									<img src="{% static 'djangoweb/temp/sidebar-news-image-1.jpg' %}" class="img-responsive" alt="">
+								</div>
+								<div class="pull-left blg-txt">
+									<p>Donec ullamcorper nulla non metus auctor Nulla vitae elit libero, a pharetra augue <a class="active-color" href="#">[...]</a></p>
+								</div>
+							</li>
+							<li class="clearfix">
+								<h6><a href="#">Its Summary for news</a></h6>
+								<div class="pull-left blg-img margint20">
+									<img src="{% static 'djangoweb/temp/sidebar-news-image-2.jpg' %}" class="img-responsive" alt="">
+								</div>
+								<div class="pull-left blg-txt">
+									<p>Donec ullamcorper nulla non metus auctor Nulla vitae elit libero, a pharetra augue <a class="active-color" href="#">[...]</a></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>HOTEL INFORMATION</h5>
+						</div>
+						<p>Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Lorem ipsumero, a pharetra augue. Lorem ipsum dolor sit amet, consectedui.</p>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>CONTACT</h5>
+						</div>
+						<ul class="footer-links">
+							<li><p><i class="fa fa-map-marker"></i> Lorem ipsum dolor sit amet lorem Victoria 8011 Australia </p></li>
+							<li><p><i class="fa fa-phone"></i> +61 3 8376 6284 </p></li>
+							<li><p><i class="fa fa-envelope"></i> info@2035themes.com</p></li>
+						</ul>
+					</div>
+					<div class="luxen-widget news-widget">
+						<div class="title">
+							<h5>SOCIAL MEDIA</h5>
+						</div>
+						<ul class="social-links">
+							<li><a href="http://facebook.com/2035themes"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com/2035themes"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://vine.com/2035themes"><i class="fa fa-vine"></i></a></li>
+							<li><a href="http://foursquare.com/2035themes"><i class="fa fa-foursquare"></i></a></li>
+							<li><a href="http://instagram.com/2035themes"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
